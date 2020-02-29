@@ -29,7 +29,14 @@ var orm = {
       });
   },
 
-
+    insertOne: function (whereToInsert, insertInto, insertValue) {
+        var queryInsert = "INSERT INTO burgers (burger_name) VALUES (?)";
+        connection.query(queryInsert, [whereToInsert, insertInto, insertValue,] function (err, result) {
+            if (err) {
+                throw err;
+            }
+        });
+    },
   
 }
 module.exports = orm;

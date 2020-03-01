@@ -1,0 +1,19 @@
+body {
+    font-family: 'Quicksand';
+    font-weight: bold;
+    font-size: 2em;
+    background-image: url(../img/photo-of-person-holding-burger-1059040.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    color: black;
+    
+}
+
+.row {
+    padding-top: 10%;
+}
+
+h1 {
+    font-size: 80px;
+}

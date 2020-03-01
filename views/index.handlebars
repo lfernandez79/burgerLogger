@@ -1,18 +1,18 @@
-<h1>It's Burgers Thyme!!!</h1>
+<h1 class="text-center">I'm hungry!</h1>
 
 <form class="create-form">
-    <h2>Add a Burger</h2>
+    <h2>Add a Burger:</h2>
     <div class="form-group">
-        <label for="brgr">Add a Burger:</label>
-        <input type="text" id="brgr" name="burger_name">
+        <label for="brgr"></label>
+        <input type="text" id="brgr" name="burger_name"> <button class="btn btn-primary text-light" type="submit">Add My Burger</button>
     </div>
-    <button type="submit">Add My Burger</button>
+    
 </form>
 
 <div class="row">
     <div class="col-6">
         <div class="sticky">
-            <h2 class="leftSide" style="background-color: darkslategray;">Burgers that you still need to devour!</h2>
+            <h2 class="border border-warning leftSide" style="background-color: orange;">Burgers that I can chose from!</h2>
         </div>
         <ul class="leftSide">
             {{#each burgers}}
@@ -25,7 +25,7 @@
 
     <div class="col-6">
         <div class="sticky">
-            <h2 class="rightSide" style="background-color: darkslategray;">Burgers that you have devoured!</h2>
+            <h2 class="border border-warning rightSide" style="background-color: yellow;">Burgers that i eaten!</h2>
         </div>
         <ul class="rightSide">
             {{#each burgers}}

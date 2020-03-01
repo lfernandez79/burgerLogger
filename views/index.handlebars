@@ -1,0 +1,41 @@
+
+<h1 class="text-right text-primary">I'm hungry!</h1>
+
+<section>
+<form class="create-form">
+    <h2>Add a Burger:</h2>
+    <div class="form-group">
+        <label for="brgr"></label>
+        <input class="bg-transparent" type="text" id="brgr" name="burger_name"> <button class="btn btn-primary text-light" type="submit">Add it to my list</button>
+    </div>
+    
+</form>
+
+<div class="row">
+    <div class="col-6">
+        <div class="sticky">
+            <h2 class="border rounded border-warning leftSide text-center bg-light">Burgers that I can chose from!</h2>
+        </div>
+        <ul class="leftSide">
+            {{#each burgers}}
+                {{#unless devoured}}
+                    {{> burgers/burger-block devour=true}}
+                {{/unless}}
+            {{/each}}
+        </ul>
+    </div>
+
+    <div class="col-6">
+        <div class="sticky">
+            <h2 class="border rounded border-warning rightSide text-center bg-light">Burgers that i've eaten!</h2>
+        </div>
+        <ul class="rightSide">
+            {{#each burgers}}
+                {{#if devoured}}
+                     {{> burgers/burger-block devour=false}}
+                {{/if}}
+            {{/each}}
+        </ul>
+    </div>
+</div>
+</section>
